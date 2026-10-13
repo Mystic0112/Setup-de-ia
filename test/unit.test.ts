@@ -194,8 +194,8 @@ describe("mcp", () => {
 });
 
 describe("adapters", () => {
-  it("registra Claude, Cursor e Codex", () => {
-    expect(Object.keys(ADAPTERS)).toEqual(["claude", "cursor", "codex"]);
+  it("registra Claude, Cursor, Codex e Gemini", () => {
+    expect(Object.keys(ADAPTERS)).toEqual(["claude", "cursor", "codex", "gemini"]);
   });
 
   it("converte skill local em bloco de instrução com o id da skill", async () => {

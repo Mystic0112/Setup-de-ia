@@ -73,10 +73,10 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 
 ## 📦 Catálogo
 
-**65 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
+**67 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
 
 <details open>
-<summary><b>🧠 Agentes (14)</b> — especialistas por domínio</summary>
+<summary><b>🧠 Agentes (15)</b> — especialistas por domínio</summary>
 
 | id | Domínio |
 |---|---|
@@ -88,6 +88,7 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 | `agent:devops` | Docker, CI/CD, deploy, monitoramento |
 | `agent:mobile` | React Native e Flutter |
 | `agent:scripting` | Python e Node: scripts, APIs, CLIs |
+| `agent:typescript` | TypeScript moderno (5.x+), strict mode, tipagem avançada e contratos |
 | `agent:architect` | Arquitetura de software, DDD, ADRs |
 | `agent:data` | Data, BI, ETL, dashboards |
 | `agent:pm` | Planejamento, estimativas, documentação |

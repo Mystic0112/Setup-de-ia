@@ -21,6 +21,7 @@ export const CATALOG = CatalogSchema.parse([
   { id: "agent:lead", kind: "agent", name: "Lead (Leo)", description: "Coordenação multi-domínio; orquestra os demais.", targets: ["global", "project"], source: { type: "local", path: "assets/agents/lead.md" }, needsSecret: false },
   { id: "agent:agent-builder", kind: "agent", name: "Agent Builder (Vera)", description: "Cria outros agentes seguindo a arquitetura do squad: frontmatter, persona, regras e skills sob demanda.", targets: ["global", "project"], source: { type: "local", path: "assets/agents/agent-builder.md" }, needsSecret: false },
   { id: "agent:knowledge", kind: "agent", name: "Knowledge (Senku)", description: "Engenharia de conhecimento e retrieval: knowledge graphs/GraphRAG, RAG, embeddings, vector search, memória de agente, context engineering.", targets: ["global", "project"], source: { type: "local", path: "assets/agents/knowledge.md" }, needsSecret: false },
+  { id: "agent:typescript", kind: "agent", name: "TypeScript (Theo)", description: "TypeScript moderno (5.x+), strict mode, tipagem avançada e contratos estritos.", targets: ["global", "project"], source: { type: "local", path: "assets/agents/typescript.md" }, needsSecret: false },
 
   // ── Squad: commands (slash command que invoca o subagente) ──────────────
   { id: "command:backend", kind: "command", name: "/backend — Backend (Bruno)", description: "Slash command que invoca o subagente backend.", targets: ["global", "project"], requires: ["agent:backend"], source: { type: "local", path: "assets/commands/backend.md" }, needsSecret: false },
@@ -37,6 +38,7 @@ export const CATALOG = CatalogSchema.parse([
   { id: "command:lead", kind: "command", name: "/lead — Lead (Leo)", description: "Slash command que invoca o subagente lead.", targets: ["global", "project"], requires: ["agent:lead"], source: { type: "local", path: "assets/commands/lead.md" }, needsSecret: false },
   { id: "command:agent-builder", kind: "command", name: "/agent-builder — Agent Builder (Vera)", description: "Slash command que invoca o subagente agent-builder.", targets: ["global", "project"], requires: ["agent:agent-builder"], source: { type: "local", path: "assets/commands/agent-builder.md" }, needsSecret: false },
   { id: "command:knowledge", kind: "command", name: "/knowledge — Knowledge (Senku)", description: "Slash command que invoca o subagente knowledge.", targets: ["global", "project"], requires: ["agent:knowledge"], source: { type: "local", path: "assets/commands/knowledge.md" }, needsSecret: false },
+  { id: "command:typescript", kind: "command", name: "/typescript — TypeScript (Theo)", description: "Slash command que invoca o subagente typescript.", targets: ["global", "project"], requires: ["agent:typescript"], source: { type: "local", path: "assets/commands/typescript.md" }, needsSecret: false },
 
   // ── Design & UI ─────────────────────────────────────────────────────────
   // taste-skill: MIT, github.com/leonxlnx/taste-skill. É um plugin com marketplace,
