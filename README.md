@@ -73,10 +73,10 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 
 ## 📦 Catálogo
 
-**67 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
+**69 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
 
 <details open>
-<summary><b>🧠 Agentes (15)</b> — especialistas por domínio</summary>
+<summary><b>🧠 Agentes (16)</b> — especialistas por domínio</summary>
 
 | id | Domínio |
 |---|---|
@@ -95,6 +95,7 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 | `agent:lead` | Coordenação multi-domínio; orquestra os demais |
 | `agent:agent-builder` | **Cria outros agentes** seguindo esta mesma arquitetura |
 | `agent:knowledge` | Knowledge graphs/GraphRAG, RAG, embeddings, vector search, context engineering |
+| `agent:social` | Social media e conteúdo: posts, Reels, hooks, calendário, nicho, voz (spawna skills sob demanda) |
 
 Cada agente tem um **slash command** correspondente (`command:backend` → `/backend`), que declara
 dependência do agente — marcar o command puxa o agente junto.
