@@ -96,6 +96,9 @@ export const CATALOG = CatalogSchema.parse([
   // ── Playbooks de pentest (Strix Apache-2.0 + adições claude-red MIT em custom/ — ver assets/playbooks/ATTRIBUTION.md)
   // O agent:security depende deles: referencia os arquivos por caminho.
   { id: "skill:strix-playbooks", kind: "skill", name: "Playbooks de pentest (Strix)", description: "67 playbooks por vulnerabilidade, framework, cloud, protocolo — mais rede interna, mobile, cripto, fuzzing e privesc (red team). Usados pelo agent:security.", targets: ["global"], source: { type: "local", path: "assets/playbooks" }, needsSecret: false },
+  // Compliance LGPD audit-grade (neimaciel/compliance-pro-lgpd, AGPL-3.0). Vem por
+  // git (não redistribuído aqui) — mantém a própria licença. Skill de compliance pesado.
+  { id: "skill:compliance-pro-lgpd", kind: "skill", name: "compliance-pro-lgpd (LGPD audit-grade)", description: "Meta-skill de compliance LGPD nível DPO: workflows com SLA, templates PT-BR, controles técnicos e scripts (PII scanner, cookie checker). AGPL-3.0, vem por git. Para casos de compliance sério.", targets: ["global", "project"], source: { type: "git", repo: "https://github.com/neimaciel/compliance-pro-lgpd", ref: "main" }, needsSecret: false },
 
   // ── Plugins de marketplace (o harness instala; nada é redistribuído) ────
   { id: "plugin:caveman", kind: "plugin", name: "caveman (estilo terso)", description: "Respostas compactas, sem perder substância técnica. Instalado em 'lite': sem enrolação, mantendo frases completas.", targets: ["global"], harnesses: ["claude"], needsSecret: false, plugin: { marketplace: "JuliusBrussee/caveman", name: "caveman", defaultLevel: "lite" } },

@@ -73,7 +73,7 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 
 ## 📦 Catálogo
 
-**69 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
+**70 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
 
 <details open>
 <summary><b>🧠 Agentes (16)</b> — especialistas por domínio</summary>
@@ -125,7 +125,7 @@ Plugins vêm pelo **marketplace do harness** — nada de terceiro é redistribu�
 </details>
 
 <details>
-<summary><b>📚 Skills (23)</b> — conhecimento carregado sob demanda</summary>
+<summary><b>📚 Skills (24)</b> — conhecimento carregado sob demanda</summary>
 
 **Referência técnica** (os agentes carregam quando a tarefa pede):
 `php-laravel-ref` · `react-ref` · `frontend-ref` · `db-engines-ref` · `owasp-laravel-ref` ·
@@ -156,6 +156,10 @@ protocolo, mais rede interna, mobile, cripto, fuzzing e privesc (red team). Do
 [usestrix/strix](https://github.com/usestrix/strix) (Apache-2.0) e do
 [SnailSploit/claude-red](https://github.com/SnailSploit/claude-red) (MIT, adições em
 `custom/`), com [atribuição](assets/playbooks/ATTRIBUTION.md). O `agent:security` depende deles.
+
+**Jurídico/LGPD**: `compliance-pro-lgpd` — compliance LGPD nível DPO (workflows, templates PT-BR,
+scanner de PII, cookie checker). De [neimaciel/compliance-pro-lgpd](https://github.com/neimaciel/compliance-pro-lgpd)
+(AGPL-3.0, vem por git, não redistribuído aqui). Para casos de compliance sério.
 
 </details>
 
