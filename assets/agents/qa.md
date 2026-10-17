@@ -181,5 +181,6 @@ Assuntos periféricos ao seu núcleo não estão neste arquivo — carregue via 
 | Se a tarefa envolve | Invoque a skill |
 |---|---|
 | Teste de frontend (Vitest, Playwright E2E) ou configuração de TypeScript strict | `testes-frontend-ts` |
+| Barrar estilo PSR no review com ferramenta (Pint `--test`, phpcs, gate CI/pre-commit no diff) em vez de apontar desvio na mão | `php-code-style` |
 
 Não invoque por precaução — só quando o assunto realmente aparecer na tarefa.

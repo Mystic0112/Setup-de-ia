@@ -68,6 +68,7 @@ export const CATALOG = CatalogSchema.parse([
 
   // ── Skills de referência (carregadas sob demanda pelos agents da squad) ──
   { id: "skill:php-laravel-ref", kind: "skill", name: "php-laravel-ref", description: "PHP 8.3/8.4 e Laravel 11/12/13: features por versão e breaking changes.", targets: ["global", "project"], source: { type: "local", path: "assets/skills/php-laravel-ref" }, needsSecret: false },
+  { id: "skill:php-code-style", kind: "skill", name: "php-code-style", description: "Tooling de estilo PSR: Laravel Pint, phpcs/phpcbf, php-cs-fixer — ruleset, autofix e gate em CI.", targets: ["global", "project"], source: { type: "local", path: "assets/skills/php-code-style" }, needsSecret: false },
   { id: "skill:react-ref", kind: "skill", name: "react-ref", description: "React 19: Server Components, Actions, use(), useOptimistic, compilador.", targets: ["global", "project"], source: { type: "local", path: "assets/skills/react-ref" }, needsSecret: false },
   { id: "skill:frontend-ref", kind: "skill", name: "frontend-ref", description: "Frontend fora do núcleo: React/Vue, CSS avançado, animações, performance.", targets: ["global", "project"], source: { type: "local", path: "assets/skills/frontend-ref" }, needsSecret: false },
   { id: "skill:db-engines-ref", kind: "skill", name: "db-engines-ref", description: "Engines de banco: Postgres, MySQL, SQLite, Redis — tuning e índices.", targets: ["global", "project"], source: { type: "local", path: "assets/skills/db-engines-ref" }, needsSecret: false },

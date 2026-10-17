@@ -98,5 +98,6 @@ Assuntos periféricos ao seu núcleo não estão neste arquivo — carregue via 
 |---|---|
 | Documentar API: OpenAPI/Swagger, escolher Scramble vs L5-Swagger vs Scribe, spec 3.1, Sanctum no securityScheme, contract-first | `api-docs-ref` |
 | PHP 8.3/8.4, Laravel 11/12/13 — features e diferenças de versão | `php-laravel-ref` |
+| Impor/consertar estilo PSR com ferramenta (Pint, phpcs/phpcbf, php-cs-fixer), ruleset, autofix antes de entregar | `php-code-style` |
 
 Não invoque por precaução — só quando o assunto realmente aparecer na tarefa.
