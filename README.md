@@ -108,16 +108,11 @@ Quer instalar só uma coisa? Sem wizard, pelo id (dependências entram sozinhas)
 
 O catálogo descreve **o que** instalar. Um adapter por harness sabe **como** aplicar ali.
 
-```mermaid
-flowchart LR
-    C["📦 Catálogo declarativo"] --> W["⚙️ init · add · SETUP.md"]
-    W --> A1["Claude Code<br/>~/.claude"]
-    W --> A2["Cursor<br/>~/.cursor"]
-    W --> A3["Codex<br/>~/.codex"]
-    W --> A4["Gemini CLI<br/>~/.gemini"]
-    W --> M[("manifesto<br/>~/.setup-definitivo")]
-    M -.-> U["update · remove · doctor"]
-```
+<div align="center">
+
+<img src="docs/img/arquitetura.svg" alt="O catálogo declarativo alimenta o Setup de IA (init, add ou o SETUP.md lido pela tua IA), que aplica em Claude Code, Cursor, Codex e Gemini CLI e grava um manifesto usado por update, remove e doctor" width="900"/>
+
+</div>
 
 | Comando | O que faz |
 |---|---|

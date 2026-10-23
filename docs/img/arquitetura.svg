@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-labelledby="t d">
+  <title id="t">Como o Setup de IA funciona</title>
+  <desc id="d">O catálogo declarativo alimenta o Setup de IA (init, add ou o SETUP.md lido pela tua IA), que aplica em Claude Code, Cursor, Codex e Gemini CLI e grava um manifesto usado por update, remove e doctor.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1a1240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#a5b4fc"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="480" rx="20" fill="url(#bg)"/>
+  <rect width="1000" height="480" rx="20" fill="url(#grid)"/>
+  <rect width="1000" height="480" rx="20" fill="url(#glowA)"/>
+  <rect x="0.5" y="0.5" width="999" height="479" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.10"/>
+
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- rótulos de coluna -->
+    <g font-size="13" font-weight="700" letter-spacing="2" fill="#64748b" text-anchor="middle">
+      <text x="155" y="62">O QUE</text>
+      <text x="500" y="62">COMO</text>
+      <text x="850" y="40">ONDE</text>
+    </g>
+
+    <!-- setas (atrás dos cards) -->
+    <g fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" marker-end="url(#arr)">
+      <path d="M284 215 H366"/>
+      <path d="M634 215 C684 215 684 97 726 97"/>
+      <path d="M634 215 C684 215 684 179 726 179"/>
+      <path d="M634 215 C684 215 684 261 726 261"/>
+      <path d="M634 215 C684 215 684 343 726 343"/>
+    </g>
+    <path d="M500 312 V378" fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+    <path d="M634 416 H664" fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+    <text x="512" y="350" font-size="13" fill="#94a3b8">grava</text>
+
+    <!-- catálogo -->
+    <g transform="translate(30,105)">
+      <rect width="254" height="220" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="127" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">Catálogo</text>
+      <text x="127" y="64" text-anchor="middle" font-size="14" fill="#94a3b8">declarativo</text>
+      <g font-size="14" font-weight="600" fill="#c7d2fe" text-anchor="middle">
+        <g transform="translate(16,84)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">agentes</text></g>
+        <g transform="translate(134,84)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">commands</text></g>
+        <g transform="translate(16,120)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">skills</text></g>
+        <g transform="translate(134,120)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">MCPs</text></g>
+        <g transform="translate(16,156)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">plugins</text></g>
+        <g transform="translate(134,156)"><rect width="104" height="28" rx="14" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-opacity="0.6"/><text x="52" y="19">hooks</text></g>
+      </g>
+      <text x="127" y="208" text-anchor="middle" font-size="13" fill="#94a3b8">+ ferramentas e config</text>
+    </g>
+
+    <!-- motor -->
+    <g transform="translate(370,120)">
+      <rect width="260" height="190" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="url(#edge)" stroke-width="2"/>
+      <text x="130" y="44" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">Setup de IA</text>
+      <text x="130" y="66" text-anchor="middle" font-size="14" fill="#94a3b8">escolha uma porta de entrada</text>
+      <g font-size="15" font-weight="600" text-anchor="middle">
+        <g transform="translate(20,82)"><rect width="220" height="30" rx="15" fill="#22d3ee" fill-opacity="0.14" stroke="#22d3ee" stroke-opacity="0.55"/><text x="110" y="20" fill="#a5f3fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">init</text></g>
+        <g transform="translate(20,120)"><rect width="220" height="30" rx="15" fill="#22d3ee" fill-opacity="0.14" stroke="#22d3ee" stroke-opacity="0.55"/><text x="110" y="20" fill="#a5f3fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">add &lt;id&gt;</text></g>
+        <g transform="translate(20,158)"><rect width="220" height="30" rx="15" fill="#22d3ee" fill-opacity="0.14" stroke="#22d3ee" stroke-opacity="0.55"/><text x="110" y="20" fill="#a5f3fc">SETUP.md · tua IA aplica</text></g>
+      </g>
+    </g>
+
+    <!-- harnesses -->
+    <g>
+      <g transform="translate(730,65)">
+        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="64" rx="3" fill="#d97757"/>
+        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Claude Code</text>
+        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.claude</text>
+      </g>
+      <g transform="translate(730,147)">
+        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="64" rx="3" fill="#e2e8f0"/>
+        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Cursor</text>
+        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.cursor</text>
+      </g>
+      <g transform="translate(730,229)">
+        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="64" rx="3" fill="#10a37f"/>
+        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Codex</text>
+        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.codex</text>
+      </g>
+      <g transform="translate(730,311)">
+        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="64" rx="3" fill="#4285f4"/>
+        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Gemini CLI</text>
+        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.gemini</text>
+      </g>
+    </g>
+
+    <!-- manifesto -->
+    <g transform="translate(370,382)">
+      <rect width="260" height="68" rx="34" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="130" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">manifesto</text>
+      <text x="130" y="52" text-anchor="middle" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.setup-definitivo</text>
+    </g>
+    <g font-size="14" font-weight="600" text-anchor="middle" fill="#fcd34d">
+      <g transform="translate(670,401)"><rect width="86" height="30" rx="15" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.55"/><text x="43" y="20">update</text></g>
+      <g transform="translate(764,401)"><rect width="86" height="30" rx="15" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.55"/><text x="43" y="20">remove</text></g>
+      <g transform="translate(858,401)"><rect width="86" height="30" rx="15" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-opacity="0.55"/><text x="43" y="20">doctor</text></g>
+    </g>
+  </g>
+</svg>
