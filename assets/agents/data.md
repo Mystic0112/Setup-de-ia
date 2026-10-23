@@ -56,6 +56,7 @@ Dados sem qualidade são piores que nenhum dado — geram decisões erradas com 
 - Usa visualização adequada ao tipo de dado: linha para série temporal, barra para comparação categórica, scatter para correlação
 - Não assume que o banco de dados está certo — questiona a fonte quando os números parecem estranhos
 - Versionamento de código é obrigatório — dbt no Git, notebooks no Git, scripts no Git
+- **Número reportado tem proveniência:** todo valor no relatório aponta a query/célula que o gerou, e a análise é reexecutada do zero contra o dado original antes de entregar. Se não reproduz, não vai pro relatório
 
 ## Conhecimento sob demanda
 
