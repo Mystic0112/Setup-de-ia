@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/img/hero.svg" alt="Setup Definitivo: um comando, todo o teu ambiente de IA, em qualquer harness" width="100%"/>
+<img src="docs/img/hero.svg" alt="Setup de IA: um comando, todo o teu ambiente de IA, em qualquer harness" width="100%"/>
 
 <br/>
 
@@ -93,7 +93,7 @@ Quer instalar só uma coisa? Sem wizard, pelo id (dependências entram sozinhas)
 
 ## 🤔 Por que usar
 
-| Dor | Como o Setup Definitivo resolve |
+| Dor | Como o Setup de IA resolve |
 |---|---|
 | Troca de máquina e perde tudo | `init` e o ambiente volta, do jeito que estava |
 | Cursor, Codex e Gemini guardam config em formatos diferentes | Um catálogo, um **adapter por harness** que sabe aplicar no formato dele |

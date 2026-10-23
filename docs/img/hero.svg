@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
-  <title id="t">Setup Definitivo</title>
+  <title id="t">Setup de IA</title>
   <desc id="d">Um comando. Todo o teu ambiente de IA configurado em Claude Code, Cursor, Codex e Gemini CLI. 75 itens, 17 agentes, 27 skills, 4 harnesses.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -30,7 +30,7 @@
   <rect x="0.5" y="0.5" width="1199" height="379" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.10"/>
 
   <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="108" font-size="62" font-weight="800" fill="url(#title)" letter-spacing="-1.5">Setup Definitivo</text>
+    <text x="600" y="108" font-size="62" font-weight="800" fill="url(#title)" letter-spacing="-1.5">Setup de IA</text>
     <text x="600" y="156" font-size="24" fill="#c7d2fe" font-weight="500">Um comando. Todo o teu ambiente de IA, em qualquer harness.</text>
     <text x="600" y="190" font-size="16" fill="#94a3b8">Reprodutível  ·  reversível  ·  auditável</text>
 

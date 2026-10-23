@@ -24,7 +24,7 @@ async function detectHarness(harness: (typeof HarnessSchema.options)[number]): P
 }
 
 export async function runDoctor(): Promise<void> {
-  console.log("\nSetup Definitivo — doctor\n");
+  console.log("\nSetup de IA — doctor\n");
 
   console.log("Binários:");
   let failed = false;

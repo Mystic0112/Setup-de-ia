@@ -90,7 +90,7 @@ async function detectedHarnesses(harnesses: Harness[]): Promise<Harness[]> {
  * geração das skills de papel) entra nas próximas fases — ver docs/PLAN.md.
  */
 export async function runInit(opts: InitOptions): Promise<InitPlan | void> {
-  p.intro("Setup Definitivo");
+  p.intro("Setup de IA");
 
   // 1) Quais harnesses você usa?
   // Nada vem pré-marcado de propósito: a CLI escreve em config do usuário, então
