@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" width="980" height="470" role="img" aria-labelledby="t d">
+  <title id="t">setup-definitivo add --dry-run</title>
+  <desc id="d">Saída do comando add com --dry-run: mostra o que seria instalado em cada harness, sem escrever nada.</desc>
+  <rect width="980" height="470" rx="14" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="979" height="469" rx="13.5" fill="none" stroke="#30363d"/>
+  <path d="M0 14a14 14 0 0 1 14-14h952a14 14 0 0 1 14 14v26H0z" fill="#161b22"/>
+  <circle cx="26" cy="20" r="6" fill="#ff5f57"/><circle cx="48" cy="20" r="6" fill="#febc2e"/><circle cx="70" cy="20" r="6" fill="#28c840"/>
+  <text x="490" y="25" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8b949e">~/projeto — setup-definitivo</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" style="white-space:pre">
+    <text x="28" y="76"><tspan fill="#7ee787">$</tspan><tspan fill="#e6edf3"> npx github:Mystic0112/Setup-de-ia add command:legal skill:leis-br </tspan><tspan fill="#ffa657">--dry-run</tspan></text>
+
+    <text x="28" y="112" fill="#8b949e">Dependências adicionadas: <tspan fill="#d2a8ff">agent:legal</tspan></text>
+    <text x="28" y="134" fill="#8b949e">Harnesses detectados: <tspan fill="#79c0ff">claude, cursor, codex, gemini</tspan></text>
+
+    <text x="28" y="170" fill="#ffa657" font-weight="700">Claude</text>
+    <text x="28" y="192" fill="#e6edf3">  <tspan fill="#7ee787">✓</tspan> agent    <tspan fill="#d2a8ff">agent:legal</tspan>      <tspan fill="#8b949e">→ ~/.claude/agents/legal.md</tspan></text>
+    <text x="28" y="214" fill="#e6edf3">  <tspan fill="#7ee787">✓</tspan> command  <tspan fill="#d2a8ff">command:legal</tspan>    <tspan fill="#8b949e">→ ~/.claude/commands/legal.md</tspan></text>
+    <text x="28" y="236" fill="#e6edf3">  <tspan fill="#7ee787">✓</tspan> skill    <tspan fill="#d2a8ff">skill:leis-br</tspan>    <tspan fill="#8b949e">→ ~/.claude/skills/leis-br</tspan></text>
+
+    <text x="28" y="272" fill="#e6edf3" font-weight="700">Cursor</text>
+    <text x="28" y="294" fill="#e6edf3">  <tspan fill="#e3b341">⚠</tspan> agent, command e skill viram instrução   <tspan fill="#8b949e">→ ~/.cursor/rules/setup-definitivo.md</tspan></text>
+
+    <text x="28" y="330" fill="#6ee7b7" font-weight="700">Codex</text>
+    <text x="28" y="352" fill="#e6edf3">  <tspan fill="#e3b341">⚠</tspan> agent, command e skill viram instrução   <tspan fill="#8b949e">→ ~/.codex/AGENTS.md</tspan></text>
+
+    <text x="28" y="388" fill="#a8c7fa" font-weight="700">Gemini CLI</text>
+    <text x="28" y="410" fill="#e6edf3">  <tspan fill="#7ee787">✓</tspan> agent, command e skill nativos            <tspan fill="#8b949e">→ ~/.gemini/{agents,commands,skills}</tspan></text>
+
+    <text x="28" y="446" fill="#8b949e">Nada foi escrito: isso é só o plano. Tire o <tspan fill="#ffa657">--dry-run</tspan> pra aplicar.</text>
+  </g>
+</svg>

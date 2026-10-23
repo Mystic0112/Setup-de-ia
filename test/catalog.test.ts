@@ -3,6 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { ADAPTERS } from "../src/adapters/index.js";
 import { CATALOG } from "../src/registry/items.js";
 
 const pkgRoot = path.resolve(fileURLToPath(import.meta.url), "../..");
@@ -77,6 +78,15 @@ describe("integridade do catálogo", () => {
       .map((item) => item.id)
       .filter((id) => !readme.includes(`\`${id}\``));
     expect(ausentes).toEqual([]);
+  });
+
+  // O banner do README é um SVG com os números escritos à mão: mesma deriva,
+  // sem ninguém olhando. Os quatro números grandes, na ordem em que aparecem.
+  it("os números do banner (docs/img/hero.svg) batem com o catálogo", async () => {
+    const svg = await fs.readFile(path.join(pkgRoot, "docs/img/hero.svg"), "utf-8");
+    const numeros = [...svg.matchAll(/font-size="40"[^>]*>(\d+)</g)].map((m) => Number(m[1]));
+    const conta = (kind: string) => CATALOG.filter((item) => item.kind === kind).length;
+    expect(numeros).toEqual([CATALOG.length, conta("agent"), conta("skill"), Object.keys(ADAPTERS).length]);
   });
 
   it("ids são únicos", () => {

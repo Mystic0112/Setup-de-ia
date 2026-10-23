@@ -2,7 +2,7 @@
 
 CLI interativa (estilo `ruflo`) que configura um ambiente Claude Code completo — MCPs, skills/plugins, `settings.json`, `CLAUDE.md` e ferramentas externas — perguntando no terminal o que o usuário quer adicionar.
 
-- **Distribuição:** `npx github:Mystic0112/Setup-Definitivo` (sem npm público; `prepare`
+- **Distribuição:** `npx github:Mystic0112/Setup-de-ia` (sem npm público; `prepare`
   compila o `dist/` na instalação). Alternativa: apontar a própria IA para o `SETUP.md`.
 - **Alvo:** global **ou** projeto — perguntado na hora
 - **Repo:** público
@@ -249,7 +249,7 @@ MCPs que exigem credencial/login ganham um doc de conexão em `docs/mcp/<id>.md`
 
 (Outros MCPs com login, como notebooklm, também ganham guia curto.)
 
-**Repositório:** `git@github.com:Mystic0112/Setup-Definitivo.git` (público)
+**Repositório:** `git@github.com:Mystic0112/Setup-de-ia.git` (público)
 
 ### Ferramentas & infra
 
@@ -277,7 +277,7 @@ Separação dura entre **o que o autor usa** e **o que vai no repo**:
 repo/assets/agents/backend.md    (DISTRIBUÍDO)
 repo/assets/commands/backend.md
         │
-        ▼  usuário roda `npx github:Mystic0112/Setup-Definitivo init`
+        ▼  usuário roda `npx github:Mystic0112/Setup-de-ia init`
         ▼
 usuário/.claude/agents/backend.md   (instalado no ambiente de QUEM CLONOU)
 ```
@@ -317,7 +317,7 @@ Camada de adapters. Adicionar Cursor e Codex além do Claude. Detecção automá
 **Fase 4 — Robustez** ✅ concluída
 `remove` (manifesto de estado + remoção conservadora) e `update` (reaplicação idempotente),
 testes vitest. Publicação no npm **saiu do escopo**: a distribuição é via
-`npx github:Mystic0112/Setup-Definitivo`, com `prepare` compilando o `dist/` na instalação.
+`npx github:Mystic0112/Setup-de-ia`, com `prepare` compilando o `dist/` na instalação.
 
 **Fase 4.5 — Modelo agent/command + SETUP.md** ✅ concluída
 Squad remodelada como agents + commands; `SETUP.md` para apontar a própria IA ao repositório.

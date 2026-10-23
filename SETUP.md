@@ -4,7 +4,7 @@
 > para configurar o ambiente de quem clonou este repositório.
 >
 > **Humano:** aponte seu agente para cá — *"leia o SETUP.md e configure meu ambiente"* —
-> ou use a CLI determinística: `npx github:Mystic0112/Setup-Definitivo init`.
+> ou use a CLI determinística: `npx github:Mystic0112/Setup-de-ia init`.
 
 ---
 
@@ -122,10 +122,10 @@ Itens vindos de repositório git externo são **instruções que o agente vai ob
 Ela já implementa tudo acima, testado:
 
 ```bash
-npx github:Mystic0112/Setup-Definitivo init --dry-run   # mostra o plano, não escreve
-npx github:Mystic0112/Setup-Definitivo init             # aplica
-npx github:Mystic0112/Setup-Definitivo doctor           # diagnóstico
-npx github:Mystic0112/Setup-Definitivo remove <id>      # remove, recusando o que foi alterado
+npx github:Mystic0112/Setup-de-ia init --dry-run   # mostra o plano, não escreve
+npx github:Mystic0112/Setup-de-ia init             # aplica
+npx github:Mystic0112/Setup-de-ia doctor           # diagnóstico
+npx github:Mystic0112/Setup-de-ia remove <id>      # remove, recusando o que foi alterado
 ```
 
 Onde a CLI não tiver adapter para o harness do usuário, faça você mesmo seguindo as regras acima.

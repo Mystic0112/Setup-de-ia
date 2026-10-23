@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
+  <title id="t">Setup Definitivo</title>
+  <desc id="d">Um comando. Todo o teu ambiente de IA configurado em Claude Code, Cursor, Codex e Gemini CLI. 75 itens, 17 agentes, 27 skills, 4 harnesses.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1a1240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.15" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.9" cy="1" r="0.55">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="380" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="380" rx="20" fill="url(#grid)"/>
+  <rect width="1200" height="380" rx="20" fill="url(#glowA)"/>
+  <rect width="1200" height="380" rx="20" fill="url(#glowB)"/>
+  <rect x="0.5" y="0.5" width="1199" height="379" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.10"/>
+
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="108" font-size="62" font-weight="800" fill="url(#title)" letter-spacing="-1.5">Setup Definitivo</text>
+    <text x="600" y="156" font-size="24" fill="#c7d2fe" font-weight="500">Um comando. Todo o teu ambiente de IA, em qualquer harness.</text>
+    <text x="600" y="190" font-size="16" fill="#94a3b8">Reprodutível  ·  reversível  ·  auditável</text>
+
+    <!-- stats -->
+    <g transform="translate(0,222)">
+      <g transform="translate(150,0)">
+        <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">75</text>
+        <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">ITENS NO CATÁLOGO</text>
+      </g>
+      <g transform="translate(375,0)">
+        <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">17</text>
+        <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">AGENTES</text>
+      </g>
+      <g transform="translate(600,0)">
+        <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">27</text>
+        <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">SKILLS SOB DEMANDA</text>
+      </g>
+      <g transform="translate(825,0)">
+        <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">4</text>
+        <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">HARNESSES</text>
+      </g>
+    </g>
+
+    <!-- harness chips -->
+    <g transform="translate(0,338)" font-size="14" font-weight="600">
+      <g transform="translate(300,0)"><rect width="140" height="28" rx="14" fill="#d97757" fill-opacity="0.22" stroke="#d97757" stroke-opacity="0.6"/><text x="70" y="19" fill="#fdba9b">Claude Code</text></g>
+      <g transform="translate(455,0)"><rect width="100" height="28" rx="14" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.35"/><text x="50" y="19" fill="#e2e8f0">Cursor</text></g>
+      <g transform="translate(570,0)"><rect width="100" height="28" rx="14" fill="#10a37f" fill-opacity="0.22" stroke="#10a37f" stroke-opacity="0.6"/><text x="50" y="19" fill="#6ee7c8">Codex</text></g>
+      <g transform="translate(685,0)"><rect width="140" height="28" rx="14" fill="#4285f4" fill-opacity="0.22" stroke="#4285f4" stroke-opacity="0.6"/><text x="70" y="19" fill="#a8c7fa">Gemini CLI</text></g>
+    </g>
+  </g>
+</svg>
