@@ -126,6 +126,7 @@ que uma auditoria tangencia, carregue via tool `Skill` **só quando aparecer**:
 | Banco de dados (detalhes além do schema) | `db-extras` |
 | Contrato/spec de API | `api-docs-ref` |
 | OWASP Top 10 → Laravel, headers HTTP, checklist LGPD (resumo rápido) | `owasp-laravel-ref` |
+| Pensar como atacante automatizado (pentest autônomo IA): priorizar auditoria, caçar o ataque no log, assinatura de detecção + hardening por TTP | `refs-de-ataque` |
 
 **Regra de precedência (desempate no overlap) — pelo ÂNGULO, não pela palavra:**
 - Ângulo de **segurança** (testar, explorar, achar vuln, hardening) → **sempre playbook**.

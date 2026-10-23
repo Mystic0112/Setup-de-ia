@@ -73,7 +73,7 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 
 ## 📦 Catálogo
 
-**73 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
+**74 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
 
 <details open>
 <summary><b>🧠 Agentes (17)</b> — especialistas por domínio</summary>
@@ -126,12 +126,12 @@ Plugins vêm pelo **marketplace do harness** — nada de terceiro é redistribu�
 </details>
 
 <details>
-<summary><b>📚 Skills (25)</b> — conhecimento carregado sob demanda</summary>
+<summary><b>📚 Skills (26)</b> — conhecimento carregado sob demanda</summary>
 
 **Referência técnica** (os agentes carregam quando a tarefa pede):
 `php-laravel-ref` · `php-code-style` · `react-ref` · `frontend-ref` · `db-engines-ref` ·
-`owasp-laravel-ref` · `devops-ref` · `arch-ddd-ref` · `pm-ref` · `data-bi-ref` · `mobile-ref` ·
-`python-node-ref` · `api-docs-ref`
+`owasp-laravel-ref` · `refs-de-ataque` · `devops-ref` · `arch-ddd-ref` · `pm-ref` · `data-bi-ref` ·
+`mobile-ref` · `python-node-ref` · `api-docs-ref`
 
 **Produtividade**:
 `codex-code` · `defuddle` · `notebooklm` · `skill-builder` · `rule` · `dev-browser`
