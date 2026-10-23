@@ -73,7 +73,7 @@ Todos aceitam `--dry-run`. `remove` pede confirmação (a menos de `--yes`).
 
 ## 📦 Catálogo
 
-**74 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
+**75 itens** organizados em 8 categorias. O wizard pergunta uma categoria por vez.
 
 <details open>
 <summary><b>🧠 Agentes (17)</b> — especialistas por domínio</summary>
@@ -126,7 +126,7 @@ Plugins vêm pelo **marketplace do harness** — nada de terceiro é redistribu�
 </details>
 
 <details>
-<summary><b>📚 Skills (26)</b> — conhecimento carregado sob demanda</summary>
+<summary><b>📚 Skills (27)</b> — conhecimento carregado sob demanda</summary>
 
 **Referência técnica** (os agentes carregam quando a tarefa pede):
 `php-laravel-ref` · `php-code-style` · `react-ref` · `frontend-ref` · `db-engines-ref` ·
@@ -158,7 +158,9 @@ protocolo, mais rede interna, mobile, cripto, fuzzing e privesc (red team). Do
 [SnailSploit/claude-red](https://github.com/SnailSploit/claude-red) (MIT, adições em
 `custom/`), com [atribuição](assets/playbooks/ATTRIBUTION.md). O `agent:security` depende deles.
 
-**Jurídico/LGPD**: `compliance-pro-lgpd` — compliance LGPD nível DPO (workflows, templates PT-BR,
+**Jurídico/LGPD**: `leis-br` — busca sob demanda de qualquer norma brasileira (lei federal e estadual, decreto, ato de agência) no acervo aberto [ctresb/leis](https://github.com/ctresb/leis) (MIT), sem baixar nada: extrai só o artigo e manda confirmar no texto oficial pelo navegador. Usada pelo `agent:legal`.
+
+**Jurídico/LGPD (compliance)**: `compliance-pro-lgpd` — compliance LGPD nível DPO (workflows, templates PT-BR,
 scanner de PII, cookie checker). De [neimaciel/compliance-pro-lgpd](https://github.com/neimaciel/compliance-pro-lgpd)
 (AGPL-3.0, vem por git, não redistribuído aqui). Para casos de compliance sério.
 

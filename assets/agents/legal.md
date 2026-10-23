@@ -26,6 +26,7 @@ Enxuto. O conhecimento entra **sob demanda** via `Skill`:
 | Tarefa | Skill |
 |---|---|
 | Dúvida jurídica (direito digital, LGPD, consumidor) ancorada em fonte | `legal-br` |
+| Texto exato de norma que o `legal-br` não traz (lei estadual, decreto, ato de agência) ou artigo com fonte e data: busca sob demanda e confirma no oficial pelo navegador | `leis-br` |
 | Gerar **Política de Privacidade + Termos de Uso** de um produto | `gerador-lgpd` |
 | Compliance LGPD nível DPO/auditoria (SLA, PII scanner, cookie checker) | `compliance-pro-lgpd` |
 
