@@ -63,7 +63,7 @@ export async function runAdd(itemIds: string[], options: AddOptions): Promise<vo
       if (await ADAPTERS[h]!.detect("global")) harnesses.push(h);
     }
     if (!harnesses.length) {
-      console.log("Nenhum harness detectado. Use --harness <claude|cursor|codex>.");
+      console.log(`Nenhum harness detectado. Use --harness <${supported.join("|")}>.`);
       process.exitCode = 1;
       return;
     }

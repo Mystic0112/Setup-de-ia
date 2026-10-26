@@ -15,7 +15,6 @@ export function harnessBase(
     codex: ".codex",
     gemini: ".gemini",
     opencode: ".opencode",
-    omniroute: ".omniroute",
   };
   // opencode segue o XDG: o global é ~/.config/opencode, não ~/.opencode (o de projeto é .opencode)
   if (harness === "opencode" && target === "global") return path.join(home, ".config", "opencode");
@@ -66,7 +65,6 @@ export function instructionFile(
       target === "global"
         ? path.join(harnessBase("opencode", "global", cwd), "AGENTS.md")
         : path.join(root, "AGENTS.md"),
-    omniroute: path.join(harnessBase("omniroute", target, cwd), "instructions.md"),
   };
   return byHarness[harness];
 }

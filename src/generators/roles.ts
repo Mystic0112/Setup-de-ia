@@ -16,7 +16,6 @@ const HARNESS_LABEL: Record<Harness, string> = {
   codex: "Codex",
   gemini: "Gemini",
   opencode: "opencode",
-  omniroute: "OmniRoute",
 };
 
 export interface Pipeline {

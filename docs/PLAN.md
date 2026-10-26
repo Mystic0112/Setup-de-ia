@@ -55,7 +55,7 @@ Um comando, wizard guiado, resultado reprodutível. O usuário nunca edita JSON 
 
 ## 3.5 Multi-harness (roda em qualquer CLI/agente)
 
-O setup precisa aplicar config em **vários harnesses**, não só Claude Code: Claude, Cursor, Codex, Gemini CLI, opencode, OmniRoute, etc. Cada um tem local de config, formato de MCP e conceito de "skill/instrução" diferentes. Solução: uma camada de **adapters** — o catálogo descreve *o que* instalar (capacidade abstrata); o adapter do harness sabe *como* aplicar ali.
+O setup precisa aplicar config em **vários harnesses**, não só Claude Code: Claude, Cursor, Codex, Gemini CLI, opencode, etc. Cada um tem local de config, formato de MCP e conceito de "skill/instrução" diferentes. Solução: uma camada de **adapters** — o catálogo descreve *o que* instalar (capacidade abstrata); o adapter do harness sabe *como* aplicar ali.
 
 ```
         Catálogo (capacidade abstrata: "MCP oraculo360", "skill backend")
@@ -70,12 +70,12 @@ O setup precisa aplicar config em **vários harnesses**, não só Claude Code: C
 
 **Matriz de capacidade (nem tudo existe em todo harness — ser honesto):**
 
-| Capacidade | Claude | Cursor | Codex | Gemini CLI | opencode | OmniRoute |
-|---|---|---|---|---|---|---|
-| Registrar MCP | ✅ `claude mcp add` | ✅ `mcp.json` | ✅ `config.toml` | ✅ | ✅ | ✅ (roteia) |
-| Skills nativas | ✅ `skills/` | ⚠️ vira *rule* | ⚠️ vira seção AGENTS.md | ⚠️ extension/prompt | ⚠️ | ⚠️ |
-| Arquivo de instrução | CLAUDE.md | .cursorrules / rules | AGENTS.md | GEMINI.md | AGENTS.md | — |
-| Hooks/settings | ✅ | parcial | parcial | parcial | parcial | — |
+| Capacidade | Claude | Cursor | Codex | Gemini CLI | opencode |
+|---|---|---|---|---|---|
+| Registrar MCP | ✅ `claude mcp add` | ✅ `mcp.json` | ✅ `config.toml` | ✅ | ✅ |
+| Skills nativas | ✅ `skills/` | ⚠️ vira *rule* | ⚠️ vira seção AGENTS.md | ✅ `skills/` | ✅ `skills/` |
+| Arquivo de instrução | CLAUDE.md | .cursorrules / rules | AGENTS.md | GEMINI.md | AGENTS.md |
+| Hooks/settings | ✅ | — | — | — | — |
 
 - ✅ mapeia direto · ⚠️ degrada com elegância (ex.: skill vira arquivo de regra/instrução onde não há skills nativas) · — não suporta, item é pulado com aviso.
 - Cada adapter implementa a mesma interface: `detect / applyMCP / applySkill / applyInstruction / applyConfig / remove`.
@@ -323,7 +323,7 @@ testes vitest. Publicação no npm **saiu do escopo**: a distribuição é via
 Squad remodelada como agents + commands; `SETUP.md` para apontar a própria IA ao repositório.
 
 **Fase 5 — Mais harnesses + extras (backlog)**
-Adapters de Gemini CLI, opencode, OmniRoute. Perfis prontos ("full", "só design", "só monitoramento"), export/import de config, `--profile`.
+Adapters de Gemini CLI e opencode (feitos). Perfis prontos ("full", "só design", "só monitoramento"), export/import de config, `--profile`.
 
 ## 10. Pendências conhecidas
 

@@ -42,7 +42,7 @@ describe("comando add", () => {
   });
 
   it("rejeita harness sem adapter", async () => {
-    await runAdd(["agent:backend"], { harness: ["omniroute"], project: false, dryRun: true });
+    await runAdd(["agent:backend"], { harness: ["outro-harness"], project: false, dryRun: true });
     expect(process.exitCode).toBe(1);
     expect(logs.join("\n")).toContain("Harness sem adapter");
   });

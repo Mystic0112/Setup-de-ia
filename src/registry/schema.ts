@@ -10,7 +10,6 @@ export const HarnessSchema = z.enum([
   "codex",
   "gemini",
   "opencode",
-  "omniroute",
 ]);
 
 /** Fonte de um item empacotado a partir de um repositório git. */

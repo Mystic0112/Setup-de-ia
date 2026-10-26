@@ -15,7 +15,6 @@ const HARNESS_LABELS: Record<Harness, string> = {
   codex: "Codex",
   gemini: "Gemini CLI",
   opencode: "opencode",
-  omniroute: "OmniRoute",
 };
 
 /**

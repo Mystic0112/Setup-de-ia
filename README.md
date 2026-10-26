@@ -280,8 +280,11 @@ No opencode, agentes e commands são convertidos na instalação: o `tools:` do 
 (o formato dele é outro) e o `argument-hint` sai. O corpo não muda. Ele também lê `~/.claude/skills/` por
 conta própria, então as mesmas skills podem aparecer nos dois caminhos se tu usa os dois globalmente.
 
-O OmniRoute aparece no wizard marcado como *adapter não implementado*. Para ele, use o **Caminho A**
-(sua IA lê o `SETUP.md`).
+Outro harness que não está na tabela? Use o **Caminho A** (sua IA lê o `SETUP.md`).
+
+O [OmniRoute](https://github.com/cheaper-inference/OmniRoute) não entra aqui porque é um gateway de
+provedores, não um harness: os harnesses acima é que apontam pra ele, e não existe lugar nele pra
+instalar agentes, commands, skills ou instruções.
 
 ---
 
@@ -328,7 +331,6 @@ skills melhores, plugins que valem a pena), o catálogo acompanha.
 
 O que está no radar:
 
-- adapter do **OmniRoute**
 - mais MCPs e plugins conforme aparecem
 - perfis prontos (`--profile completo | design | mínimo`)
 - preview por harness no wizard
