@@ -94,6 +94,57 @@ export async function addCursorMcp(
   return `registrado: ${item.id} -> ${file}${backup ? ` (backup: ${backup})` : ""}`;
 }
 
+/** Entrada de MCP local no formato do opencode: comando e args num array só. */
+export function opencodeMcpEntry(item: Item): { type: "local"; command: string[]; enabled: true } {
+  if (!item.mcp) throw new Error(`${item.id}: sem spec de mcp (cmd/args).`);
+  return { type: "local", command: [item.mcp.cmd, ...item.mcp.args], enabled: true };
+}
+
+/**
+ * Registra um MCP em opencode.json (chave "mcp"), preservando o resto do arquivo.
+ * `file` pode ser opencode.json ou opencode.jsonc; se tiver comentários não é JSON
+ * válido e nada é escrito (reescrever perderia os comentários).
+ */
+export async function addOpencodeMcp(
+  item: Item,
+  file: string,
+  dryRun: boolean
+): Promise<string> {
+  const entry = opencodeMcpEntry(item);
+  if (dryRun) return `[dry-run] registrar ${item.id} -> ${file}`;
+
+  const fileExists = await exists(file);
+  const existing = fileExists ? await fs.readFile(file, "utf-8") : "";
+  let current: Record<string, unknown> = { $schema: "https://opencode.ai/config.json" };
+  if (fileExists) {
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(existing);
+    } catch {
+      throw new Error(`${file} não é JSON válido (comentários?) — nenhuma mudança aplicada`);
+    }
+    if (!isObject(parsed)) throw new Error(`${file} deve conter um objeto JSON`);
+    current = parsed;
+  }
+
+  const servers = current.mcp;
+  if (servers !== undefined && !isObject(servers)) {
+    throw new Error(`${file}: mcp deve ser um objeto JSON`);
+  }
+  const name = mcpName(item);
+  const currentServers = servers ?? {};
+  const previous = isObject(currentServers[name]) ? currentServers[name] : {};
+  const updated = JSON.stringify({
+    ...current,
+    mcp: { ...currentServers, [name]: { ...previous, ...entry } },
+  }, null, 2) + "\n";
+  if (updated === existing) return `já existe: ${item.id}, sem mudanças`;
+
+  const backup = await backupFile(file);
+  await writeFileEnsured(file, updated);
+  return `registrado: ${item.id} -> ${file}${backup ? ` (backup: ${backup})` : ""}`;
+}
+
 /** Serializa apenas o bloco simples aceito pelo config.toml do Codex. */
 export function codexMcpBlock(item: Item): string {
   if (!item.mcp) throw new Error(`${item.id}: sem spec de mcp (cmd/args).`);

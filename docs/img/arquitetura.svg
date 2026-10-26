@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-labelledby="t d">
   <title id="t">Como o Setup de IA funciona</title>
-  <desc id="d">O catálogo declarativo alimenta o Setup de IA (init, add ou o SETUP.md lido pela tua IA), que aplica em Claude Code, Cursor, Codex e Gemini CLI e grava um manifesto usado por update, remove e doctor.</desc>
+  <desc id="d">O catálogo declarativo alimenta o Setup de IA (init, add ou o SETUP.md lido pela tua IA), que aplica em Claude Code, Cursor, Codex, Gemini CLI e opencode e grava um manifesto usado por update, remove e doctor.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
@@ -33,16 +33,17 @@
     <g font-size="13" font-weight="700" letter-spacing="2" fill="#64748b" text-anchor="middle">
       <text x="155" y="62">O QUE</text>
       <text x="500" y="62">COMO</text>
-      <text x="850" y="40">ONDE</text>
+      <text x="850" y="34">ONDE</text>
     </g>
 
     <!-- setas (atrás dos cards) -->
     <g fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" marker-end="url(#arr)">
       <path d="M284 215 H366"/>
-      <path d="M634 215 C684 215 684 97 726 97"/>
-      <path d="M634 215 C684 215 684 179 726 179"/>
-      <path d="M634 215 C684 215 684 261 726 261"/>
-      <path d="M634 215 C684 215 684 343 726 343"/>
+      <path d="M634 215 C684 215 684 79 726 79"/>
+      <path d="M634 215 C684 215 684 151 726 151"/>
+      <path d="M634 215 C684 215 684 223 726 223"/>
+      <path d="M634 215 C684 215 684 295 726 295"/>
+      <path d="M634 215 C684 215 684 367 726 367"/>
     </g>
     <path d="M500 312 V378" fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
     <path d="M634 416 H664" fill="none" stroke="#a5b4fc" stroke-opacity="0.85" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
@@ -78,29 +79,35 @@
 
     <!-- harnesses -->
     <g>
-      <g transform="translate(730,65)">
-        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
-        <rect width="6" height="64" rx="3" fill="#d97757"/>
-        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Claude Code</text>
-        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.claude</text>
+      <g transform="translate(730,50)">
+        <rect width="240" height="58" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="58" rx="3" fill="#d97757"/>
+        <text x="26" y="26" font-size="17" font-weight="700" fill="#ffffff">Claude Code</text>
+        <text x="26" y="46" font-size="13" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.claude</text>
       </g>
-      <g transform="translate(730,147)">
-        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
-        <rect width="6" height="64" rx="3" fill="#e2e8f0"/>
-        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Cursor</text>
-        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.cursor</text>
+      <g transform="translate(730,122)">
+        <rect width="240" height="58" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="58" rx="3" fill="#e2e8f0"/>
+        <text x="26" y="26" font-size="17" font-weight="700" fill="#ffffff">Cursor</text>
+        <text x="26" y="46" font-size="13" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.cursor</text>
       </g>
-      <g transform="translate(730,229)">
-        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
-        <rect width="6" height="64" rx="3" fill="#10a37f"/>
-        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Codex</text>
-        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.codex</text>
+      <g transform="translate(730,194)">
+        <rect width="240" height="58" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="58" rx="3" fill="#10a37f"/>
+        <text x="26" y="26" font-size="17" font-weight="700" fill="#ffffff">Codex</text>
+        <text x="26" y="46" font-size="13" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.codex</text>
       </g>
-      <g transform="translate(730,311)">
-        <rect width="240" height="64" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
-        <rect width="6" height="64" rx="3" fill="#4285f4"/>
-        <text x="26" y="29" font-size="18" font-weight="700" fill="#ffffff">Gemini CLI</text>
-        <text x="26" y="50" font-size="14" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.gemini</text>
+      <g transform="translate(730,266)">
+        <rect width="240" height="58" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="58" rx="3" fill="#4285f4"/>
+        <text x="26" y="26" font-size="17" font-weight="700" fill="#ffffff">Gemini CLI</text>
+        <text x="26" y="46" font-size="13" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.gemini</text>
+      </g>
+      <g transform="translate(730,338)">
+        <rect width="240" height="58" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect width="6" height="58" rx="3" fill="#14b8a6"/>
+        <text x="26" y="26" font-size="17" font-weight="700" fill="#ffffff">opencode</text>
+        <text x="26" y="46" font-size="13" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">~/.config/opencode</text>
       </g>
     </g>
 

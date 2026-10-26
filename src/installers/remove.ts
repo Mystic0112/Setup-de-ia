@@ -123,18 +123,20 @@ async function preflightCursorMcp(
   } catch {
     return { refusal: `RECUSADO: JSON inválido em ${artifact.path}` };
   }
-  if (!isObject(current) || !isObject(current.mcpServers)) {
-    return { refusal: `RECUSADO: mcpServers inválido em ${artifact.path}` };
+  const key = artifact.key ?? "mcpServers";
+  const container = isObject(current) ? current[key] : undefined;
+  if (!isObject(current) || !isObject(container)) {
+    return { refusal: `RECUSADO: ${key} inválido em ${artifact.path}` };
   }
-  const server = current.mcpServers[artifact.name];
+  const server = container[artifact.name];
   if (server === undefined) return { alreadyAbsent: `MCP já ausente: ${artifact.name}` };
   if (!isObject(server) || contentDigest(JSON.stringify(server)) !== artifact.digest) {
     return { refusal: `RECUSADO: MCP ${artifact.name} foi alterado pelo usuário` };
   }
 
-  const servers = { ...current.mcpServers };
+  const servers = { ...container };
   delete servers[artifact.name];
-  const updated = JSON.stringify({ ...current, mcpServers: servers }, null, 2) + "\n";
+  const updated = JSON.stringify({ ...current, [key]: servers }, null, 2) + "\n";
   return {
     action: {
       message: `remover MCP ${artifact.name} -> ${artifact.path}`,

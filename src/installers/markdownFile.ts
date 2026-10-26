@@ -34,6 +34,22 @@ function localSourceFile(item: Item): string {
   return source;
 }
 
+/**
+ * O opencode não usa o frontmatter do Claude: `tools:` (lista) é obsoleto no formato
+ * dele (objeto), `name` vem do nome do arquivo e `argument-hint` não existe. Fica só
+ * o que ele entende: `description` (+ `mode: subagent` nos agentes, que o Claude
+ * invoca como subagente). O corpo não muda. Sem frontmatter, devolve igual.
+ */
+export function opencodeMarkdown(kind: Item["kind"], content: string): string {
+  const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(content);
+  if (!match) return content;
+  const description = /^description:.*$/m.exec(match[1])?.[0];
+  const front = [description, kind === "agent" ? "mode: subagent" : undefined]
+    .filter((line): line is string => line !== undefined)
+    .join("\n");
+  return `---\n${front}\n---\n${content.slice(match[0].length)}`;
+}
+
 export interface MarkdownInstallResult {
   message: string;
   artifacts: Artifact[];
@@ -68,7 +84,8 @@ export async function installMarkdownFile(
     };
   }
 
-  const content = await fs.readFile(src, "utf-8");
+  const raw = await fs.readFile(src, "utf-8");
+  const content = harness === "opencode" ? opencodeMarkdown(item.kind, raw) : raw;
   const current = (await exists(dest)) ? await fs.readFile(dest, "utf-8") : null;
   if (current === content) {
     return {

@@ -51,6 +51,8 @@ Itens com `needsSecret: true` têm um guia em `docs/mcp/<nome>.md`. **Leia o gui
 | Claude | `claude mcp add <nome> -- <cmd>` | `CLAUDE.md` | sim |
 | Cursor | `~/.cursor/mcp.json` → `{"mcpServers":{…}}` | `.cursorrules` (projeto) · `~/.cursor/rules/` (global) | não |
 | Codex | `~/.codex/config.toml` → `[mcp_servers.<nome>]` | `~/.codex/AGENTS.md` (global) · `AGENTS.md` (projeto) | não |
+| Gemini CLI | `~/.gemini/config/mcp_config.json` → `{"mcpServers":{…}}` | `GEMINI.md` | sim (`~/.gemini/skills/`) |
+| opencode | `~/.config/opencode/opencode.json` → `{"mcp":{"<nome>":{"type":"local","command":[…],"enabled":true}}}` | `~/.config/opencode/AGENTS.md` (global) · `AGENTS.md` (projeto) | sim (`~/.config/opencode/skills/` · `.opencode/skills/`) |
 | Outros | consulte a doc do harness | idem | provavelmente não |
 
 **Harness sem skills nativas:** converta a skill em um bloco de instrução no arquivo de instruções, delimitado por marcadores (ver "Blocos gerenciados").

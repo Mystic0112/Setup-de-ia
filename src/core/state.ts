@@ -1,9 +1,8 @@
 import fs from "node:fs/promises";
-import os from "node:os";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { z } from "zod";
-import { backupFile, exists, writeFileEnsured } from "./fsx.js";
+import { backupFile, exists, setupHome, writeFileEnsured } from "./fsx.js";
 import { HarnessSchema, TargetSchema } from "../registry/schema.js";
 
 const AbsolutePathSchema = z.string().refine(path.isAbsolute, "caminho deve ser absoluto");
@@ -18,6 +17,8 @@ const ArtifactSchema = z.discriminatedUnion("type", [
     path: AbsolutePathSchema,
     name: z.string(),
     digest: z.string(),
+    // chave de topo do JSON onde o servidor vive; ausente = "mcpServers" (Cursor/Gemini)
+    key: z.string().optional(),
   }),
   z.object({
     type: z.literal("toml-section"),
@@ -60,7 +61,7 @@ export type StateEntry = z.infer<typeof StateEntrySchema>;
 export type State = z.infer<typeof StateSchema>;
 
 export function stateFile(): string {
-  return path.join(os.homedir(), ".setup-definitivo", "state.json");
+  return path.join(setupHome(), "state.json");
 }
 
 export function contentDigest(value: string | Buffer): string {

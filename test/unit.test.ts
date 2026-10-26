@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { ADAPTERS } from "../src/adapters/index.js";
 import { copyDir } from "../src/core/fsx.js";
-import { skillsDir, instructionFile, settingsFile } from "../src/core/targets.js";
+import { agentsDir, commandsDir, skillsDir, instructionFile, settingsFile } from "../src/core/targets.js";
 import {
   applyInstruction,
   applySettings,
@@ -61,8 +61,16 @@ describe("targets", () => {
     ["cursor", "project", "/tmp/proj/.cursorrules"],
     ["codex", "global", path.join(os.homedir(), ".codex", "AGENTS.md")],
     ["codex", "project", "/tmp/proj/AGENTS.md"],
+    ["opencode", "global", path.join(os.homedir(), ".config", "opencode", "AGENTS.md")],
+    ["opencode", "project", "/tmp/proj/AGENTS.md"],
   ] as const)("instrução de %s no alvo %s", (harness, target, expected) => {
     expect(instructionFile(harness, target, "/tmp/proj")).toBe(expected);
+  });
+  it("opencode: global em ~/.config/opencode, projeto em ./.opencode", () => {
+    expect(skillsDir("opencode", "global")).toBe(path.join(os.homedir(), ".config", "opencode", "skills"));
+    expect(skillsDir("opencode", "project", "/tmp/proj")).toBe("/tmp/proj/.opencode/skills");
+    expect(agentsDir("opencode", "global")).toBe(path.join(os.homedir(), ".config", "opencode", "agents"));
+    expect(commandsDir("opencode", "project", "/tmp/proj")).toBe("/tmp/proj/.opencode/commands");
   });
   it("settings de projeto usam arquivo local", () => {
     expect(settingsFile("claude", "project", "/tmp/proj")).toBe(
@@ -194,8 +202,8 @@ describe("mcp", () => {
 });
 
 describe("adapters", () => {
-  it("registra Claude, Cursor, Codex e Gemini", () => {
-    expect(Object.keys(ADAPTERS)).toEqual(["claude", "cursor", "codex", "gemini"]);
+  it("registra Claude, Cursor, Codex, Gemini e opencode", () => {
+    expect(Object.keys(ADAPTERS)).toEqual(["claude", "cursor", "codex", "gemini", "opencode"]);
   });
 
   it("converte skill local em bloco de instrução com o id da skill", async () => {

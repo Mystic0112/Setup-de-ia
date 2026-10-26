@@ -8,6 +8,7 @@
 ![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
 ![Codex](https://img.shields.io/badge/Codex-10A37F?style=for-the-badge&logo=openai&logoColor=white)
 ![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)
+![opencode](https://img.shields.io/badge/opencode-14B8A6?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)
 
 <br/>
@@ -83,7 +84,7 @@ Quer instalar só uma coisa? Sem wizard, pelo id (dependências entram sozinhas)
 | | |
 |---|---|
 | 📦 **Catálogo declarativo** | Agentes, commands, skills, MCPs, plugins, hooks, ferramentas e config num lugar só, fácil de estender |
-| 🎯 **4 harnesses** | Claude Code, Cursor, Codex e Gemini CLI com o mesmo ambiente; onde falta recurso nativo, o conteúdo degrada pra instrução |
+| 🎯 **5 harnesses** | Claude Code, Cursor, Codex, Gemini CLI e opencode com o mesmo ambiente; onde falta recurso nativo, o conteúdo degrada pra instrução |
 | 🔁 **Reprodutível** | A mesma escolha gera o mesmo ambiente, e o `update` reaplica o que está no manifesto |
 | ↩️ **Reversível** | O `remove` desfaz só o que o setup instalou, e **recusa** o que você editou |
 | 🔍 **Auditável** | `--dry-run` em tudo, `doctor` pra diagnosticar, catálogo em TypeScript com testes |
@@ -96,7 +97,7 @@ Quer instalar só uma coisa? Sem wizard, pelo id (dependências entram sozinhas)
 | Dor | Como o Setup de IA resolve |
 |---|---|
 | Troca de máquina e perde tudo | `init` e o ambiente volta, do jeito que estava |
-| Cursor, Codex e Gemini guardam config em formatos diferentes | Um catálogo, um **adapter por harness** que sabe aplicar no formato dele |
+| Cursor, Codex, Gemini e opencode guardam config em formatos diferentes | Um catálogo, um **adapter por harness** que sabe aplicar no formato dele |
 | "Como você configurou isso?" vira meia hora de instrução | *"Leia o SETUP.md e configure meu ambiente."* |
 | Tenta desfazer e não sabe o que era teu e o que a ferramenta criou | **Manifesto + marcadores**: o `remove` só toca no que o setup criou |
 | Agente inchado, contexto caro a cada chamada | Arquitetura **od-skill**: núcleo enxuto no agente, conhecimento como skill sob demanda |
@@ -263,20 +264,24 @@ lê ou grava a tua credencial.
 
 ## 🎯 Harnesses
 
-| Capacidade | Claude Code | Cursor | Codex | Gemini CLI |
-|---|---|---|---|---|
-| Registrar MCP | ✅ `claude mcp add` | ✅ `mcp.json` | ✅ `config.toml` | ✅ `mcp_config.json` |
-| Agents e commands | ✅ nativo | ⚠️ vira instrução | ⚠️ vira instrução | ✅ nativo |
-| Skills | ✅ nativo | ⚠️ vira instrução | ⚠️ vira instrução | ✅ nativo |
-| Plugins | ✅ marketplace | — | — | — |
-| Arquivo de instrução | `CLAUDE.md` | `.cursorrules` / `rules/` | `AGENTS.md` | `GEMINI.md` |
-| `settings.json` (hooks) | ✅ | — | — | — |
+| Capacidade | Claude Code | Cursor | Codex | Gemini CLI | opencode |
+|---|---|---|---|---|---|
+| Registrar MCP | ✅ `claude mcp add` | ✅ `mcp.json` | ✅ `config.toml` | ✅ `mcp_config.json` | ✅ `opencode.json` |
+| Agents e commands | ✅ nativo | ⚠️ vira instrução | ⚠️ vira instrução | ✅ nativo | ✅ nativo |
+| Skills | ✅ nativo | ⚠️ vira instrução | ⚠️ vira instrução | ✅ nativo | ✅ nativo |
+| Plugins | ✅ marketplace | — | — | — | — |
+| Arquivo de instrução | `CLAUDE.md` | `.cursorrules` / `rules/` | `AGENTS.md` | `GEMINI.md` | `AGENTS.md` |
+| `settings.json` (hooks) | ✅ | — | — | — | — |
 
 ⚠️ = **degradação elegante**: onde o conceito não existe, o conteúdo entra como bloco marcado no
 arquivo de instrução, individualmente removível.
 
-opencode e OmniRoute aparecem no wizard marcados como *adapter não implementado*. Para eles, use o
-**Caminho A** (sua IA lê o `SETUP.md`).
+No opencode, agentes e commands são convertidos na instalação: o `tools:` do Claude vira `mode: subagent`
+(o formato dele é outro) e o `argument-hint` sai. O corpo não muda. Ele também lê `~/.claude/skills/` por
+conta própria, então as mesmas skills podem aparecer nos dois caminhos se tu usa os dois globalmente.
+
+O OmniRoute aparece no wizard marcado como *adapter não implementado*. Para ele, use o **Caminho A**
+(sua IA lê o `SETUP.md`).
 
 ---
 
@@ -323,7 +328,7 @@ skills melhores, plugins que valem a pena), o catálogo acompanha.
 
 O que está no radar:
 
-- adapters de **opencode** e **OmniRoute**
+- adapter do **OmniRoute**
 - mais MCPs e plugins conforme aparecem
 - perfis prontos (`--profile completo | design | mínimo`)
 - preview por harness no wizard
