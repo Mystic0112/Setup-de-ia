@@ -38,12 +38,12 @@
     <g transform="translate(0,222)">
       <g transform="translate(150,0)">
         <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">75</text>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">77</text>
         <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">ITENS NO CATÁLOGO</text>
       </g>
       <g transform="translate(375,0)">
         <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">17</text>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">18</text>
         <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">AGENTES</text>
       </g>
       <g transform="translate(600,0)">
