@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
   <title id="t">Setup de IA</title>
-  <desc id="d">Um comando. Todo o teu ambiente de IA configurado em Claude Code, Cursor, Codex, Gemini CLI e opencode. 78 itens, 18 agentes, 28 skills, 5 harnesses.</desc>
+  <desc id="d">Um comando. Todo o teu ambiente de IA configurado em Claude Code, Cursor, Codex, Gemini CLI e opencode. 79 itens, 18 agentes, 29 skills, 5 harnesses.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
@@ -38,7 +38,7 @@
     <g transform="translate(0,222)">
       <g transform="translate(150,0)">
         <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">78</text>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">79</text>
         <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">ITENS NO CATÁLOGO</text>
       </g>
       <g transform="translate(375,0)">
@@ -48,7 +48,7 @@
       </g>
       <g transform="translate(600,0)">
         <rect width="210" height="92" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">28</text>
+        <text x="105" y="48" font-size="40" font-weight="800" fill="#ffffff">29</text>
         <text x="105" y="74" font-size="14" fill="#a5b4fc" letter-spacing="1.5">SKILLS SOB DEMANDA</text>
       </g>
       <g transform="translate(825,0)">
